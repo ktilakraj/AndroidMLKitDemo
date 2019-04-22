@@ -9,4 +9,5 @@
     <dimen name="meta_label">12dp</dimen>
     <dimen name="dimen_40dp">40dp</dimen>
     <dimen name="ic_plus_width">28dp</dimen>
+    <dimen name="cardHeight_40dp">150dp</dimen>
 </resources>

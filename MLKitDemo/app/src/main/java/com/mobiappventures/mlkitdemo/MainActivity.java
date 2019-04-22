@@ -20,6 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -192,6 +193,8 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 101);
     }
 
+    @BindView(R.id.profile_desc)
+    TextView profDescription;
     private void getCardDetails(Bitmap bitmap)
     {
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
@@ -201,6 +204,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(FirebaseVisionText it) {
                 String[] words = it.getText().split("\n");
+                profDescription.setText(it.getText());
+
                 for (String word : words)
                 {
                     Log.e("TAG", word);
