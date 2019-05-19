@@ -12,7 +12,7 @@ public class SplashActivity extends AppCompatActivity
 {
 
     ImageView splashImage;
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int SPLASH_TIME_OUT = 3500;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -33,7 +33,7 @@ public class SplashActivity extends AppCompatActivity
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
 
                 // close this activity

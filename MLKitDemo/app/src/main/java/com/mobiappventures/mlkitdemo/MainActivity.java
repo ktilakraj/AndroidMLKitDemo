@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         imgProfile.setColorFilter(ContextCompat.getColor(this, R.color.profile_default_tint));
     }
 
-    @OnClick({R.id.img_plus, R.id.img_profile})
+    @OnClick({ R.id.img_profile})
     void onProfileImageClick() {
         Dexter.withActivity(this)
                 .withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)

@@ -1,26 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/homescreen"
     tools:context=".LoginActivity">
 
-    <android.support.design.widget.AppBarLayout
+
+    <EditText
         android:layout_width="match_parent"
+        android:id="@+id/loginusername"
+        android:layout_margin="20dp"
+        android:hint="User Name"
+        android:textColor="#ffffff"
+        android:layout_height="@dimen/cardHeight_40dp" />
+
+    <view
+        android:layout_width="match_parent"
+        android:id="@+id/viewsep"
+        android:layout_below="@+id/loginusername"
+        android:background="@android:color/transparent"
+        android:layout_height="@dimen/dimen_20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/loginpassword"
+        android:hint="Password"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/viewsep"
+        android:layout_margin="30dp"
+        android:layout_height="@dimen/cardHeight_40dp" />
+
+    <Button
+        android:id="@+id/buttologin"
+        android:layout_below="@+id/loginpassword"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/dimen_20dp"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:textColor="#ffffff"
+        android:background="@color/colorAccent"
+        android:text="Login" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_login" />
-
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
