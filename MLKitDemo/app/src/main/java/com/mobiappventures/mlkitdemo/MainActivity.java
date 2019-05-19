@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadProfileDefault() {
-        Glide.with(this).load(R.drawable.baseline_account_circle_black_48)
+        Glide.with(this).load(R.drawable.travelfareimage)
                 .into(imgProfile);
         imgProfile.setColorFilter(ContextCompat.getColor(this, R.color.profile_default_tint));
     }
